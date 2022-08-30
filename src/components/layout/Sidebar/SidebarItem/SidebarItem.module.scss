@@ -1,0 +1,13 @@
+@import '@styles/variables';
+
+.sidebarItem {
+    height: 32px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.active {
+    background: $activeBg;
+}

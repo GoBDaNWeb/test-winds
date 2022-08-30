@@ -1,0 +1,32 @@
+@import '@styles/variables';
+
+.btns {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    transition: $primaryTransition;
+    gap: 5px;
+    width: 70px;
+    &:hover {
+        background: #414144;
+        border-radius: 6px;
+    }
+    &:hover > .btnFile {
+        transition: $primaryTransition;
+        opacity: 1;
+    }
+    .btn {
+        background: none;
+
+        border: none;
+        cursor: pointer;
+    }
+    .btnFile {
+        transition: $primaryTransition;
+        opacity: 0;
+    }
+}
+
+.editing {
+    pointer-events: none;
+}

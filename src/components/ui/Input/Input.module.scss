@@ -1,0 +1,12 @@
+@import '@styles/variables';
+
+.input {
+    background: none;
+    border-radius: 6px;
+    border: $primaryBorder;
+    height: 36px;
+    width: 100%;
+    color: #71717a;
+    outline: none;
+    padding: 10px;
+}

@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// * react
+import { useContext, useEffect } from 'react';
+import RowCtx from './context/AppContext';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// * components
+import Layout from '@components/layout/Layout';
+import Main from '@components/screens/Main';
+
+const App = () => {
+    const { saveRow, rowData, rowsData } = useContext(RowCtx);
+
+    useEffect(() => {
+        saveRow(rowData(null, 'level'), rowsData);
+    }, []);
+
+    return (
+        <Layout>
+            <Main />
+        </Layout>
+    );
+};
 
 export default App;

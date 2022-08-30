@@ -1,0 +1,40 @@
+@import '@styles/variables';
+
+.header {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    background: $secondaryBg;
+    border-bottom: $primaryBorder;
+    .navigation {
+        display: flex;
+        gap: 28px;
+        .navigationLinks {
+            display: flex;
+            gap: 28px;
+            li {
+                color: $secondaryText;
+            }
+            .active {
+                color: $primaryText;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    width: 110%;
+                    background: #fff;
+                    bottom: -14px;
+                    left: -2px;
+                }
+            }
+        }
+    }
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}

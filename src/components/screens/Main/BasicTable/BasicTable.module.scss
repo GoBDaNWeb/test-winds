@@ -1,0 +1,14 @@
+@import '@styles/variables';
+
+.table {
+    background: $primaryBg;
+
+    .tableHead {
+        height: 20px;
+        z-index: 999;
+        position: relative;
+    }
+    .editable {
+        pointer-events: none;
+    }
+}
